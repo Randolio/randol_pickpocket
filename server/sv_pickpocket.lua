@@ -51,7 +51,7 @@ RegisterNetEvent('randol_pickpocket:server:pickPocketNpc', function(netId)
             DoNotification(src, ('You stole $%s.'):format(amount), 'success')
         end
     else
-        DoNotification(src, 'This person doesnt appear to have anything.', 'error')
+        TriggerClientEvent('randol_pickpocket:client:failedPickpocket', src, netId)
     end
 
     Entity(target).state:set('pickPocketed', true, true)
