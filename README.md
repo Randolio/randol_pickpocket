@@ -11,6 +11,7 @@ With the current hype of Prodigy RP 2.0 release, I know some weasel is going to 
 * Detection whilst pickpocketing to see if the ped is running, flees or the distance between you is substantial.
 * GTA Zone based rewards. Each zone has a tier assigned (low, medium, high) which you can obviously change to suit your needs.
 * Different rewards for each tier and also configurable cash rewards for each zone. By default I roll a 50/50 chance on whether it will be item based or cash reward.
+* Failing to roll chance based loot will result in the ped pulling out a tazer and zapping you.
 
 ## Requirements
 
