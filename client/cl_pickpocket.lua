@@ -68,3 +68,14 @@ exports.ox_target:addGlobalPed({
 lib.callback.register('randol_pickpocket:client:getZoneName', function(coords)
     return GetNameOfZone(coords.x, coords.y, coords.z)
 end)
+
+RegisterNetEvent('randol_pickpocket:client:failedPickpocket', function(netId)
+    if GetInvokingResource() then return end
+    local entity = NetworkGetEntityFromNetworkId(netId)
+    if not DoesEntityExist(entity) or IsEntityDead(entity) then return end
+    ClearPedTasksImmediately(entity)
+    GiveWeaponToPed(entity, `WEAPON_STUNGUN`, 255, false, false)
+    SetPedDropsWeaponsWhenDead(entity, false)
+    TaskCombatPed(entity, cache.ped, 0, 16)
+    DoNotification('I think they caught you!', 'error')
+end)
