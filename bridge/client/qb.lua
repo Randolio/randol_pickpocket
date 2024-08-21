@@ -8,6 +8,7 @@ RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
 end)
 
 RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
+    table.wipe(PlayerData)
 end)
 
 function hasPlyLoaded()
