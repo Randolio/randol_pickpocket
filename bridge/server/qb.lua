@@ -44,5 +44,5 @@ function itemLabel(item)
 end
 
 function itemLabel(item)
-    return exports.ox_inventory:Items(item) and exports.ox_inventory:Items(item).label or lib.print.error(('UNREGISTERED REWARD ITEM: %s'):format(item))
+    return exports.ox_inventory:Items(item) and exports.ox_inventory:Items(item).label or ('UNREGISTERED REWARD ITEM: %s'):format(item)
 end
