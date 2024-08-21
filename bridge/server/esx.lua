@@ -37,9 +37,10 @@ function AddMoney(xPlayer, moneyType, amount)
 end
 
 function AddItem(src, item, amount)
+    if not exports.ox_inventory:CanCarryItem(src, item, amount) then return error(("Player %s tried to carry an item (%s) but couldn't!"):format(src, item) end
     exports.ox_inventory:AddItem(src, item, amount)
 end
 
 function itemLabel(item)
-    return exports.ox_inventory:Items(item) and exports.ox_inventory:Items(item).label or ('UNREGISTERED REWARD ITEM: %s'):format(item)
+    return exports.ox_inventory:Items(item) and exports.ox_inventory:Items(item).label or lib.print.error(('UNREGISTERED REWARD ITEM: %s'):format(item))
 end
