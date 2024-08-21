@@ -1,6 +1,6 @@
 ## Randolio: Pickpocketing
 
-**ESX/QB/ND supported with bridge.**
+**ESX/QB/QBX supported with bridge.**
 
 With the current hype of Prodigy RP 2.0 release, I know some weasel is going to make a pickpocketing script and slap it on tebex for like $15 when it honestly takes very minimal work. With my lack of motivation lately this was a easy, simple release for me to hopefully get back on the scripting grind. Enjoy.
 
