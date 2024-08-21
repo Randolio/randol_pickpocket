@@ -36,6 +36,7 @@ function AddMoney(player, acc, amount)
 end
 
 function AddItem(src, item, amount)
+    if not exports.ox_inventory:CanCarryItem(src, item, amount) then return error(("Player %s tried to carry an item (%s) but couldn't!"):format(src, item) end
     exports.ox_inventory:AddItem(src, item, amount)
 end
 
