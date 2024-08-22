@@ -33,7 +33,7 @@ function GetCharacterName(Player)
 end
 
 function AddMoney(player, acc, amount)
-    player.addMoney(acc, amount, 'pickpocket')
+    player.addMoney(acc, amount)
 end
 
 function AddItem(src, item, amount)
