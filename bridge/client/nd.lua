@@ -6,12 +6,14 @@ lib.load('@ND_Core.init')
 
 local PlayerData = {}
 
-AddEventHandler("ND:characterLoaded", function(character)
-    PlayerData = character
+RegisterNetEvent('ND:characterUnloaded', function()
+    LocalPlayer.state.isLoggedIn = false
+    table.wipe(PlayerData)
 end)
 
-AddEventHandler("ND:characterUnloaded", function(character)
-    table.wipe(PlayerData)
+RegisterNetEvent('ND:characterLoaded', function(character)
+    LocalPlayer.state.isLoggedIn = true
+    PlayerData = character
 end)
 
 function hasPlyLoaded()
