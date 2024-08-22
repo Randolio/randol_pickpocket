@@ -1,6 +1,9 @@
-if GetResourceState('ND_Core') ~= 'started' then return end
+if not lib.checkDependency('ND_Core', '2.0.0') then return end
 
-local NDCore = exports.ND_Core
+NDCore = {}
+
+lib.load('@ND_Core.init')
+
 local PlayerData = {}
 
 AddEventHandler("ND:characterLoaded", function(character)

@@ -1,9 +1,11 @@
-if GetResourceState('ND_Core') ~= 'started' then return end
+if not lib.checkDependency('ND_Core', '2.0.0') then return end
 
-local NDCore = exports["ND_Core"] or exports.ND_Core
+NDCore = {}
+
+lib.load('@ND_Core.init')
 
 function GetPlayer(id)
-    return NDCore:getPlayer(id)
+    return NDCore.getPlayer(id)
 end
 
 function DoNotification(src, text, nType)
