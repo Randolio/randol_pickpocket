@@ -44,7 +44,3 @@ function itemLabel(item)
     return exports.ox_inventory:Items(item).label
 end
 
-function itemLabel(item)
-    return exports.ox_inventory:Items(item) and exports.ox_inventory:Items(item).label or ('UNREGISTERED REWARD ITEM: %s'):format(item)
-end
-
