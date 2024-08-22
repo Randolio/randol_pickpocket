@@ -32,5 +32,5 @@ end)
 
 AddEventHandler('onResourceStart', function(res)
     if GetCurrentResourceName() ~= res or not hasPlyLoaded() then return end
-    PlayerData = NDCore:getPlayer()
+    PlayerData = NDCore.getPlayer()
 end)
